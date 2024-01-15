@@ -1,0 +1,49 @@
+// body {
+//   background-image: url("https://preview.colorlib.com/theme/selling/images/hero_2.jpg.webp");
+//   overflow: hidden;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   margin-top: 0px;
+// }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 250px;
+  top: 290px;
+  color: white;
+  font-size: 45px;
+}
+.paragraf {
+  position: relative;
+  top: 220px;
+  left: 445px;
+  color: white;
+  font-size: 25px;
+}
+.btn1 {
+  margin-right: 5px;
+  top: 222px;
+  position: relative;
+  left: 480px;
+  height: 55px;
+  font-size: 25px;
+  width: 180px;
+  background: none;
+  color: white;
+  border: 1px solid white;
+}
+.btn2 {
+  top: 220px;
+  position: relative;
+  left: 480px;
+  height: 55px;
+  font-size: 23px;
+  width: 280px;
+}
