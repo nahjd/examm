@@ -9,6 +9,7 @@ import Contact from "../components/Contact/Contact";
 import Home from "../components/Home/Home";
 import Basket from "../components/Basket/Basket";
 import AddCard from "../components/AddCard/AddCard";
+import Footer from "../components/Footer/Footer";
 
 export const routes = [
   {
@@ -49,6 +50,14 @@ export const routes = [
       {
         path: "/addcard",
         element: <AddCard />,
+      },
+      {
+        path: "/special",
+        element: <Special />,
+      },
+      {
+        path: "/footer",
+        element: <Footer />,
       },
     ],
   },

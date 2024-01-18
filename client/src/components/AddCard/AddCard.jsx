@@ -21,7 +21,7 @@ function AddPerson() {
         <div className="text">Add Person</div>
         <div className="inputs-btn">
           <TextField
-            style={{ backgroundColor: "red" }}
+          
             onChange={(e) => {
               setName(e.target.value);
             }}

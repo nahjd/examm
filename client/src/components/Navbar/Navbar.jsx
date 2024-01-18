@@ -51,8 +51,8 @@ export default function ButtonAppBar() {
             <Link style={{ color: "black" }} to="/blog">
               <Button color="inherit">Blog</Button>
             </Link>
-            <Link style={{ color: "black" }} to="/contact">
-              <Button color="inherit">Contact</Button>
+            <Link style={{ color: "black" }} to="/footer">
+              <Button color="inherit">Footer</Button>
             </Link>
             <Link style={{ color: "black" }} to="/basket">
               <Button color="inherit">

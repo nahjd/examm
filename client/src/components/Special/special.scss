@@ -1,0 +1,134 @@
+.special{
+    background-color: rgb(240, 240, 240);
+   text-align: center;
+   margin-top: 20px;
+   .special2{
+    //    background-color: red;
+    position: relative;
+    top: 25px;
+       margin-bottom:25px ;
+       h4{
+         
+           color: gray;
+           font-size: 15px;
+       }
+       h1 {
+           font-size: 41px;
+       }
+   }
+}
+.one{
+    // border: 1px solid red;
+    display: flex;
+    gap: 95px;
+    
+    justify-content: center;
+    align-items: center;
+    h2{
+        color: gray;
+        font-size: 18px;
+    }
+    .one1{
+        // border: 1px solid green;
+        text-align: center;
+        h2{
+          position: relative;
+          top: -28px;
+
+        }
+        span{
+            // border: 1px solid blue;
+            position: relative;
+            top: -28px;
+            left: 5px;
+           
+           
+        }
+        
+    }
+    .icon{
+        margin-top: 35px;
+    }
+}
+.more{
+    color: orangered;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    margin-bottom: 19px;
+}
+
+.one{
+    // border: 1px solid red;
+    display: flex;
+    gap: 95px;
+    
+    justify-content: center;
+    align-items: center;
+    h2{
+        color: gray;
+        font-size: 18px;
+    }
+    .two2{
+        // border: 1px solid green;
+        text-align: center;
+        h2{
+          position: relative;
+          top: -28px;
+
+        }
+        span{
+            // border: 1px solid blue;
+            position: relative;
+            top: -28px;
+            left: 5px;
+           
+           
+        }
+        
+    }
+    .icon{
+        margin-top: 35px;
+    }
+}
+
+
+.one{
+    // border: 1px solid red;
+    display: flex;
+    gap: 95px;
+    
+    justify-content: center;
+    align-items: center;
+    h2{
+        color: gray;
+        font-size: 18px;
+    }
+    .three3{
+        // border: 1px solid green;
+        text-align: center;
+        h2{
+          position: relative;
+          top: -28px;
+
+        }
+        span{
+            // border: 1px solid blue;
+            position: relative;
+            top: -28px;
+            left: 5px;
+           
+           
+        }
+        
+    }
+    .icon{
+        margin-top: 35px;
+    }
+}
+.slm{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}

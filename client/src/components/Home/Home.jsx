@@ -8,6 +8,7 @@ const Home = () => {
     <>
       <NavbarSmalic />
       <Navbar />
+   
       <div className="container">
         <div className="text">
           <h1>Shop With Us</h1>
