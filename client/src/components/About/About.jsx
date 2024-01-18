@@ -5,6 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import NavbarSmalic from "./../NavbarSmalic/NavbarSmalic";
+import {Helmet} from "react-helmet";
 import "./About.scss";
 const About = () => {
   return (
@@ -13,6 +14,11 @@ const About = () => {
       <Navbar />
       <section>
         <div className="about">
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>About</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
           <div className="leftdiv">
             <img
               src="https://preview.colorlib.com/theme/selling/images/about_1.jpg"

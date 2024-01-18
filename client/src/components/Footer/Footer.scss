@@ -1,0 +1,55 @@
+.foot{
+    width: 100%;
+    // border: 1px solid red;
+    display: flex;
+    gap: 95px;
+    justify-content: center;
+    align-items: center;
+    .onee{
+        ul{
+            color: black;
+            font-size: 18px;
+        }
+        li{
+            list-style: none;
+        }
+    }
+    .twoo{
+      
+        ul{
+            color: black;
+        }
+        li{
+            list-style: none;
+        }
+    }
+    .threee{
+        margin-right: 15px;
+        
+
+        li{
+           position: relative;
+           right: 85px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+        }
+    }
+}
+.imagess{
+    img{
+        width: 250px;
+    }
+    h4{
+        font-size: 21px;
+        color: black;
+    }
+}
+.cart{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}

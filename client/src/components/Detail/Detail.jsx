@@ -1,41 +1,43 @@
-import * as React from "react";
+import React from 'react'
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { useState, useEffect } from "react";
+import axios from "axios";
 import Navbar from "./../Navbar/Navbar";
 import { FaStar } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import Grid from "@mui/material/Unstable_Grid2";
-import axios from "axios";
-import { useDispatch } from "react-redux";
-import "./Products.scss";
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from "react";
 import {Link} from "react-router-dom"
 import {
-  fetchData,
-  addBasket,
-  increaseBasket,
-  decreaseBasket,
-  deleteBasket,
-} from "./../../redux/slice/personSlice";
+    fetchData,
+    addBasket,
+    increaseBasket,
+    decreaseBasket,
+    deleteBasket,
+  } from "./../../redux/slice/personSlice";
+import "./Detail.scss"
+const Detail = () => {
+const {id} = useParams()
+console.log(id);
+        const [data, setData] = useState("");
+      
+        useEffect(() => {
+          axios.get("http://localhost:6060/person").then((res) => {
+            console.log(res.data);
+            setData(res.data);
+          });
+        }, []);
+        console.log(data);
+let product = data && data.find((x)=> x._id == id)
+console.log(product);
 
-
-const Products = () => {
-  const [data, setData] = useState("");
-  const dispatch = useDispatch();
-  
-  useEffect(() => {
-    axios.get("http://localhost:6060/person").then((res) => {
-      console.log(res.data);
-      setData(res.data);
-    });
-  }, []);
   return (
     <>
-      <Navbar /> <br />
       <div className="products">
         <h5>POPULAR PRODUCTS</h5>
         <h1>Our Products</h1>
@@ -50,30 +52,28 @@ const Products = () => {
       <br />
       <br />
       <div className="container2">
-        {data &&
-          data.map((elem, i) => (
+       
             <Card
-              container
-              spacing={4}
             style={{width:"400px"}}
-
-              key={i}
+              container
+              spacing={1}
+              key={product && product._id}
               sx={{
                 border: "none",
-
+            
                 height: 555,
                 margin: "0 auto",
               }}
             >
-              <Grid xs={12}>
+              <Grid xs={1}>
                 <CardMedia
                   sx={{ height: 340, display: "flex", flexWrap: "wrap" }}
-                  image={elem.image}
+                  image={product.image}
                   title="green iguana"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    {elem.name}
+                    {product && product.name}
                   </Typography>
                   <div className="icons">
                     <div className="icon">
@@ -85,35 +85,36 @@ const Products = () => {
                   </div>{" "}
                   <br />
                   <Typography variant="body2" color="text.secondary">
-                    {elem.about}
+                    {product && product.about}
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <div className="btns">
-                    <Button 
-                      onClick={() => {
-                                dispatch(addBasket(elem));
+                 <Link to="/basket">
+                 <Button   onClick={() => {
+                                dispatch(addBasket(item));
                               }}
                       style={{ backgroundColor: "black", color: "white" }}
                       size="small"
                     >
                       CART
                     </Button>
+                 </Link>  
 
-                   <Link to={`/${elem._id}`}><Button 
+                   <Button 
                       style={{ color: "black", border: "2px solid black" }}
                       size="small"
                     >
                       VIEW
-                    </Button></Link> 
+                    </Button>
                   </div>
                 </CardActions>
               </Grid>
             </Card>
-          ))}
+          ))
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Products;
+export default Detail

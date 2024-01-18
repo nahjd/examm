@@ -10,6 +10,7 @@ import Home from "../components/Home/Home";
 import Basket from "../components/Basket/Basket";
 import AddCard from "../components/AddCard/AddCard";
 import Footer from "../components/Footer/Footer";
+import Detail from "../components/Detail/Detail";
 
 export const routes = [
   {
@@ -18,6 +19,10 @@ export const routes = [
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/:id",
+        element: <Detail />,
       },
       {
         path: "/products",
